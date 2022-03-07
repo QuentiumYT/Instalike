@@ -1,0 +1,24 @@
+{
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "prettier.jsxBracketSameLine": false,
+  "files.insertFinalNewline": true,
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "typescript.preferences.jsxAttributeCompletionStyle": "none",
+  "prettier.trailingComma": "es5",
+  "cSpell.words": [
+    "hookform",
+    "instalike",
+    "instalost",
+    "swiper"
+  ]
+}
