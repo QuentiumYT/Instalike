@@ -1,6 +1,14 @@
 {
   "name": "instalike",
   "version": "1.0.0",
+  "description": "An Instagram like app made in react to share and view your friends pictures.",
+  "license": "MIT",
+  "author": "Quentin Lienhardt",
+  "main": "src/App.tsx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QuentiumYT/Instalike.git"
+  },
   "private": true,
   "scripts": {
     "loc": "yarn loc-w",
