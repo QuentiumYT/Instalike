@@ -84,7 +84,7 @@ export default function Footer() {
           <LinkButton label='Go to the API' href='https://api.instalike.fr/docs/'>
             <InfoIcon />
           </LinkButton>
-          <LinkButton label='See this project on GitHub' href='https://github.com/QuentiumYT'>
+          <LinkButton label='See this project on GitHub' href='https://github.com/QuentiumYT/Instalike'>
             <LinkIcon />
           </LinkButton>
         </Stack>
