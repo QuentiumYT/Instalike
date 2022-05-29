@@ -32,7 +32,7 @@ import {
 import { FeedIcon, HomeIcon } from './CustomIcons';
 
 import api from '../services/api';
-import { setIsLoggedIn, setLoggedUser, setNotificationCount } from '../redux/store';
+import { AppDispatch, setIsLoggedIn, setLoggedUser, setNotificationCount } from '../redux/store';
 import fetchUserAsync from '../redux/user/thunks';
 import { selectUser } from '../redux/user/selectors';
 import getNotificationCount from '../redux/notification/selectors';
@@ -63,7 +63,7 @@ const ActionButton = ({ children, label, to }: { children: ReactNode; label: str
 export default function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   const notificationCount = useSelector(getNotificationCount);
 

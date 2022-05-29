@@ -17,7 +17,7 @@ import {
 } from '@chakra-ui/react';
 
 import api from '../services/api';
-import { setIsLoggedIn, setNotificationCount } from '../redux/store';
+import { AppDispatch, setIsLoggedIn, setNotificationCount } from '../redux/store';
 import fetchUserAsync from '../redux/user/thunks';
 
 const Login = (): ReactElement => {
@@ -30,7 +30,7 @@ const Login = (): ReactElement => {
 
   const navigate = useNavigate();
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => setEmailInput(e.target.value);
   const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => setPasswordInput(e.target.value);
@@ -55,7 +55,7 @@ const Login = (): ReactElement => {
     api
       .get<Instalike.Notification[]>('/users/me/notifications')
       .then((response) => {
-        const count = response.data.filter((notification) => !notification.isRead).length;
+        const count = response.data.filter((notification: Instalike.Notification) => !notification.isRead).length;
         dispatch(setNotificationCount(count));
       })
       .catch((e) => {
