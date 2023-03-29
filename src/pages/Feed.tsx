@@ -143,7 +143,7 @@ const Feed = (): ReactElement => {
           next={() => getNextPosts(posts?.nextCursor)}
           hasMore={posts?.hasMorePages ?? false}
           loader={
-            <Spinner d='block' m='auto' size='xl' />
+            <Spinner display='block' m='auto' size='xl' />
           }
           endMessage={
             <p style={{ textAlign: 'center' }}>
