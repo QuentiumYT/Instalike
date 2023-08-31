@@ -5,16 +5,18 @@
   "[ignore]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-  "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "prettier.jsxBracketSameLine": false,
+  "prettier.tabWidth": 2,
+  "prettier.bracketSameLine": false,
+  "prettier.trailingComma": "es5",
   "files.insertFinalNewline": true,
   "html.format.wrapAttributes": "force-expand-multiline",
   "typescript.preferences.jsxAttributeCompletionStyle": "none",
-  "prettier.trailingComma": "es5",
+  "typescript.tsdk": "node_modules/typescript/lib",
   "cSpell.words": [
     "hookform",
     "instalike",

@@ -119,7 +119,12 @@ export default function FullPost({ post, updatePost }: { post: Instalike.Post, u
     api
       .get<Instalike.Comment[]>(`/posts/${postId}/comments`)
       .then((response) => {
-        setComments(response.data);
+        interface CommentList {
+          items: Instalike.Comment[];
+        }
+        const commentList: CommentList = response.data as unknown as CommentList;
+
+        setComments(commentList.items);
       })
       .catch(() => {
         throw new Error('Error while getting comments');
@@ -187,7 +192,7 @@ export default function FullPost({ post, updatePost }: { post: Instalike.Post, u
       <Box
         w='100%'
         minW='60%'
-        maxW={post.dimensions.width}
+        maxW={post.dimensions?.width}
         bg={useColorModeValue('white', 'gray.900')}
         boxShadow='2xl'
         rounded='md'
@@ -224,9 +229,9 @@ export default function FullPost({ post, updatePost }: { post: Instalike.Post, u
         <Box
           as={Swiper}
           w='100%'
-          maxW={post.dimensions.width}
+          maxW={post.dimensions?.width}
           h='100%'
-          maxH={post.dimensions.height}
+          maxH={post.dimensions?.height}
           bg='gray.100'
           color='red'
           mt={-6}
@@ -328,7 +333,7 @@ export default function FullPost({ post, updatePost }: { post: Instalike.Post, u
               <Text
                 color='gray.500'
               >
-                Dimensions: {post.dimensions.width}x{post.dimensions.height}px
+                Dimensions: {post.dimensions?.width}x{post.dimensions?.height}px
               </Text>
               <Text
                 color='gray.500'
@@ -372,7 +377,7 @@ export default function FullPost({ post, updatePost }: { post: Instalike.Post, u
       <Box
         w='100%'
         minW='60%'
-        maxW={post.dimensions.width}
+        maxW={post.dimensions?.width}
         bg={useColorModeValue('white', 'gray.900')}
         boxShadow='xl'
         rounded='md'

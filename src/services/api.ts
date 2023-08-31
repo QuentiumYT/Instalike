@@ -1,11 +1,11 @@
-import axios from 'axios';
+import axios, { AxiosRequestHeaders } from 'axios';
 
 const API_URL = process.env.REACT_APP_ENDPOINT;
 
 const api = axios.create({
   baseURL: API_URL,
   headers: {
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
   }
 });
 
@@ -19,12 +19,13 @@ api.interceptors.request.use(
         headers: {
           ...config.headers,
           Authorization: `Bearer ${token}`
-        }
+        } as AxiosRequestHeaders,
       };
     }
 
     return config;
-  });
+  }
+);
 
 api.interceptors.response.use(
   (response) => response,
@@ -44,6 +45,7 @@ api.interceptors.response.use(
     }
 
     return Promise.reject(error);
-  });
+  }
+);
 
 export default api;
