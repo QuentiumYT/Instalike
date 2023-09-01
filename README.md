@@ -8,9 +8,13 @@ API: https://api.instalike.fr/docs/
 
 ### Auth
 
-Email: quentin.lienhardt@etu.unistra.fr
+~~Email: quentin.lienhardt@etu.unistra.fr~~
 
-Password: DWEB2022
+~~Password: DWEB2022~~
+
+Email: chloe.jacob4@etu.unistra.fr
+
+Password: DWEB2023
 
 ## 🏆 Stats
 
